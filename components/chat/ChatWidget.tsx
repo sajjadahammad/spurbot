@@ -126,11 +126,11 @@ export function ChatWidget() {
   );
 
   return (
-    <Card className="flex flex-col h-[600px] w-full max-w-2xl mx-auto">
-      <CardHeader>
-        <CardTitle>AI Support Chat</CardTitle>
+    <Card className="flex flex-col h-[600px] w-full max-w-2xl mx-auto font-mono bg-[#1a1a1a] border-[#333]">
+      <CardHeader className="border-b border-[#333]">
+        <CardTitle className="text-white">AI Support Chat</CardTitle>
         {error && (
-          <p className="text-sm text-destructive mt-2">{error}</p>
+          <p className="text-sm text-red-400 mt-2">{error}</p>
         )}
       </CardHeader>
       <CardContent className="flex-1 flex flex-col p-0 overflow-hidden">

@@ -23,11 +23,11 @@ export function MessageList({ messages, isTyping }: MessageListProps) {
   return (
     <div
       ref={scrollRef}
-      className="flex-1 overflow-y-auto h-full"
+      className="flex-1 overflow-y-auto h-full bg-[#1a1a1a]"
     >
       <div className="p-4 min-h-full flex flex-col">
         {messages.length === 0 && !isTyping && (
-          <div className="flex items-center justify-center flex-1 text-muted-foreground">
+          <div className="flex items-center justify-center flex-1 text-gray-500">
             <p className="text-sm">Start a conversation by sending a message below.</p>
           </div>
         )}

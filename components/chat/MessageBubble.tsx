@@ -7,10 +7,6 @@ interface MessageBubbleProps {
 
 export function MessageBubble({ message }: MessageBubbleProps) {
   const isUser = message.sender === "user";
-  const timestamp = new Date(message.timestamp).toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
 
   return (
     <div
@@ -23,20 +19,12 @@ export function MessageBubble({ message }: MessageBubbleProps) {
         className={cn(
           "max-w-[80%] rounded-lg px-4 py-2 shadow-sm",
           isUser
-            ? "bg-primary text-primary-foreground"
-            : "bg-muted text-muted-foreground"
+            ? "bg-[#3a3a3a] text-white border border-[#444]"
+            : "bg-[#2a2a2a] text-gray-200 border border-[#333]"
         )}
       >
         <p className="text-sm whitespace-pre-wrap break-words">
           {message.text}
-        </p>
-        <p
-          className={cn(
-            "text-xs mt-1 opacity-70",
-            isUser ? "text-right" : "text-left"
-          )}
-        >
-          {timestamp}
         </p>
       </div>
     </div>

@@ -57,7 +57,7 @@ export async function generateReply(
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-pro",
+      model: "gemini-2.5-flash",
       generationConfig: {
         maxOutputTokens: MAX_TOKENS,
         temperature: 0.7,
